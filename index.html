@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre músicas famosas a partir de qualquer palavra.">
+  <title>Faixa Certa | Descubra músicas</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./"><span class="brand-mark"><span>♪</span></span> FAIXA CERTA</a>
+      <nav><a href="#resultados">RESULTADOS</a><a href="https://www.apple.com/br/apple-music/" target="_blank" rel="noreferrer">APPLE MUSIC ↗</a></nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Busca musical / 001</div>
+        <h1>Uma palavra.<br><em>Mil histórias.</em></h1>
+      </div>
+      <p class="hero-note">Digite uma palavra e encontre as faixas mais populares que carregam esse clima no nome.</p>
+    </section>
+
+    <section class="search-zone" aria-label="Pesquisar músicas">
+      <div class="search-label"><span>O que você quer ouvir?</span><span>Enter ↵</span></div>
+      <form class="search-form" id="searchForm">
+        <input id="query" type="search" placeholder="ex.: love, saudade, verão..." autocomplete="off" aria-label="Palavra para buscar">
+        <button id="submitButton" type="submit">BUSCAR FAIXAS</button>
+      </form>
+    </section>
+
+    <main id="resultados">
+      <div class="results-top"><h2 id="title">Comece uma busca</h2><span class="count" id="count"></span></div>
+      <div class="status" id="status">As faixas mais famosas para sua próxima descoberta aparecem aqui.</div>
+      <div class="results" id="results"></div>
+    </main>
+
+    <footer><span>Faixa Certa — para ouvir melhor</span><span>Dados: iTunes Search API</span></footer>
+  </div>
+  <div class="platform-backdrop" id="platformBackdrop" hidden></div>
+  <aside class="platform-panel" id="platformPanel" aria-labelledby="platformTitle" hidden>
+    <button class="panel-close" id="panelClose" type="button" aria-label="Fechar opções">×</button>
+    <div class="panel-kicker">ESCOLHA ONDE OUVIR</div>
+    <h2 id="platformTitle">Abrir música</h2>
+    <p id="platformArtist"></p>
+    <div class="platform-links">
+      <a class="platform-link spotify" id="spotifyLink" target="_blank" rel="noreferrer"><span>●</span> Spotify <b>↗</b></a>
+      <a class="platform-link youtube" id="youtubeLink" target="_blank" rel="noreferrer"><span>▶</span> YouTube <b>↗</b></a>
+      <a class="platform-link apple" id="appleLink" target="_blank" rel="noreferrer"><span>♪</span> Apple Music <b>↗</b></a>
+    </div>
+  </aside>
+  <script src="/script.js" defer></script>
+</body>
+</html>
