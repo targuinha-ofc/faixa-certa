@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: faixa-certa
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /

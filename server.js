@@ -2,7 +2,8 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT) || 3000;
+const host = '0.0.0.0';
 const root = __dirname;
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
@@ -60,4 +61,4 @@ const server = http.createServer(async (request, response) => {
   serveFile(request, response);
 });
 
-server.listen(port, () => console.log(`Faixa Certa rodando em http://localhost:${port}`));
+server.listen(port, host, () => console.log(`Faixa Certa rodando em http://${host}:${port}`));
